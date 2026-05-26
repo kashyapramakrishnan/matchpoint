@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Player Matches{% endblock %}
+{% block page_title %}Player Matches{% endblock %}
+{% block content %}
+{% for m in matches %}
+<p>
+Match {{ m[0] }}: Player {{ m[3] }} vs Player {{ m[4] }}
+</p>
+{% endfor %}
+<a href="/player">Back</a>
+{% endblock %}

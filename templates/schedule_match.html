@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Schedule Match{% endblock %}
+{% block page_title %}Schedule Match{% endblock %}
+{% block content %}
+<body>
+
+<form method="POST">
+
+    Tournament:<br>
+    <select name="tournament">
+        {% for t in tournaments %}
+            <option value="{{ t[0] }}">{{ t[1] }}</option>
+        {% endfor %}
+    </select><br>
+
+    Player 1:<br>
+    <select name="player1">
+        {% for p in players %}
+            <option value="{{ p[0] }}">{{ p[1] }}</option>
+        {% endfor %}
+    </select><br>
+
+    Player 2:<br>
+    <select name="player2">
+        {% for p in players %}
+            <option value="{{ p[0] }}">{{ p[1] }}</option>
+        {% endfor %}
+    </select><br>
+
+    Match Date:<br>
+    <input type="datetime-local" name="date"><br>
+
+     <div class="btn-center">
+         <button type="submit">Schedule</button>
+     </div>
+</form>
+
+<a href="/admin">Back</a>
+
+</body>
+</html>
+{% endblock %}

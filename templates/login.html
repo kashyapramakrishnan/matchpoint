@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}User Login{% endblock %}
+{% block page_title %}User Login{% endblock %}
+{% block content %}
+<html>
+    <body>
+        <form method="POST">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        {{ message }}<br>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            Email:<br>
+            <input type="email" name="email"><br>
+
+            Password:<br>
+            <input type="password" name="password">
+
+            <div class="btn-center">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </body>
+    <a href="/player/register">New User? Click here to register.</a>
+</html>
+{% endblock %}

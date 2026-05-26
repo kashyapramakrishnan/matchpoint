@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Record Match Result{% endblock %}
+{% block page_title %}Record Match Result{% endblock %}
+{% block content %}
+<body>
+
+<form method="POST">
+
+    Match:<br>
+    <select name="match">
+        {% for m in matches %}
+            <option value="{{ m[0] }}">
+                Match {{ m[0] }} ({{ m[3] }} vs {{ m[4] }})
+            </option>
+        {% endfor %}
+    </select><br>
+
+    Player 1 Score:<br>
+    <input type="number" name="p1_score" required><br>
+
+    Player 2 Score:<br>
+    <input type="number" name="p2_score" required><br>
+
+    Winner (Player ID):<br>
+    <input type="number" name="winner" required><br>
+
+    Loser (Player ID):<br>
+    <input type="number" name="loser" required><br>
+
+    <div class="btn-center">
+        <button type="submit">Submit</button>
+    </div>
+
+</form>
+<a href="/admin">Back</a>
+
+</body>
+</html>
+{% endblock %}

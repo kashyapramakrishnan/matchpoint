@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block page_title %}Add Player{% endblock %}
+{% block content %}
+<body>
+
+<form method="POST">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    Name:<br>
+    <input type="text" name="name" required><br>
+
+    Email:<br>
+    <input type="email" name="email"><br>
+
+    Set Password:<br>
+    <input type="password" name="password" required><br>
+
+    <div class="btn-center">
+        <button type="submit">Add Player</button>
+    </div>
+</form>
+
+<a href="/admin">Back</a>
+
+</body>
+</html>
+{% endblock %}

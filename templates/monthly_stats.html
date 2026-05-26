@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Monthly Tournament Count</h2>
+
+<table border="1", cellpadding="10">
+    <tr>
+        <th>Month</th>
+        <th>Total Tournaments</th>
+    </tr>
+
+    {% for row in data %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="/admin">Back</a>
+{% endblock %}

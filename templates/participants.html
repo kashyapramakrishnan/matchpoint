@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Participants{% endblock %}
+{% block page_title %}Tournament Participants{% endblock %}
+{% block content %}
+<ul>
+{% for p in tournament_participants %}
+    <li>{{ p[1] }} ({{ p[2] }})</li>
+{% endfor %}
+</ul>
+<a href="/player/tournaments">Back</a>
+{% endblock %}

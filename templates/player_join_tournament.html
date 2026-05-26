@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Join Tournament{% endblock %}
+{% block page_title %}Join Tournament{% endblock %}
+{% block content %}
+<form method="POST">
+
+    Select Tournament:<br>
+    <select name="tournament">
+        {% for t in tournaments %}
+        <option value="{{ t[0] }}">{{ t[1] }}</option>
+        {% endfor %}
+    </select><br>
+
+    <div class="btn-center">
+        <button type="submit">Join</button>
+    </div>
+</form>
+<a href="/player">Back</a>
+{% endblock %}

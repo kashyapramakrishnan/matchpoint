@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Admin Home{% endblock %}
+{% block page_title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<a href="/admin/admin_logs" class="btn_a">View Admin Logs</a>
+<a href="/admin/add_player" class="btn_a">Add Player</a>
+<a href="/admin/create_tournament" class="btn_a">Create Tournament</a>
+<a href="/admin/schedule_match" class="btn_a">Schedule Match</a>
+<a href="/admin/record_result" class="btn_a">Record Result</a>
+<a href="/admin/monthly_stats" class="btn_a">Monthly Tournament Stats</a>
+<a href="/admin/monthly_game_stats" class="btn_a">Game-wise Monthly Stats</a>
+
+<a href="/admin/logout">Logout</a>
+{% endblock %}

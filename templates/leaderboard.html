@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Leaderboard{% endblock %}
+{% block page_title %}Leaderboard{% endblock %}
+{% block content %}
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Player ID</th>
+        <th>Player Name</th>
+        <th>Wins</th>
+        <th>Losses</th>
+        <th>Points</th>
+    </tr>
+
+    {% for row in leaderboard %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/player">Back</a>
+{% endblock %}

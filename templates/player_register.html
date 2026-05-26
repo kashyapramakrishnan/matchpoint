@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Player Registration{% endblock %}
+{% block page_title %}Player Registration{% endblock %}
+{% block content %}
+<form method="POST">
+    Username:<br>
+    <input type="text" name="name"><br>
+
+    Email:<br>
+    <input type="email" name="email"><br>
+
+    Password:<br>
+    <input type="password" name="password"><br>
+
+    <div class="btn-center">
+        <button type="submit">Register</button>
+    </div>
+</form>
+<a href="/">Back</a>
+{% endblock %}
