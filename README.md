@@ -4,7 +4,7 @@
 
 MatchPoint is a full-stack tournament management platform built using **Flask** and **MySQL**, designed to streamline the organization and management of university-level gaming and sports tournaments.
 
-The system supports both **Admin** and **Player** roles, enabling tournament creation, player registration, match scheduling, result tracking, and dynamic leaderboard generation through a responsive web interface.
+Designed by Kashyap Ramakrishnan and Sourav M B, the system supports both **Admin** and **Player** roles, enabling tournament creation, player registration, match scheduling, result tracking, and dynamic leaderboard generation through a responsive web interface.
 
 ---
 
